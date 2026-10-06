@@ -1,0 +1,143 @@
+{
+  "version": "7.0",
+  "nodes": [
+    {
+      "id": 1,
+      "type": "start",
+      "text": "Start",
+      "x": 430,
+      "y": 55,
+      "w": 150,
+      "h": 58
+    },
+    {
+      "id": 2,
+      "type": "input",
+      "text": "buku = 3;\npulpen = 2;\nflashdisk = 1",
+      "x": 423,
+      "y": 155,
+      "w": 190,
+      "h": 70
+    },
+    {
+      "id": 3,
+      "type": "process",
+      "text": "total_buku = harga_buku * buku; total_pulpen = harga_pulpen * pulpen; total_flashdisk = harga_flashdisk * flashdisk",
+      "x": 395,
+      "y": 539,
+      "w": 165,
+      "h": 195
+    },
+    {
+      "id": 4,
+      "type": "input",
+      "text": "harga_buku = 25000; harga_pulpen = 8000; harga_flashdisk = 75000",
+      "x": 392,
+      "y": 260,
+      "w": 195,
+      "h": 110
+    },
+    {
+      "id": 5,
+      "type": "input",
+      "text": "uang = 200000; d = 0.10;  pajak = 0.11",
+      "x": 420,
+      "y": 418,
+      "w": 190,
+      "h": 70
+    },
+    {
+      "id": 6,
+      "type": "process",
+      "text": "total_harga = total_buku + total_pulpen + total_flashdisk",
+      "x": 441,
+      "y": 782,
+      "w": 135,
+      "h": 100
+    },
+    {
+      "id": 7,
+      "type": "process",
+      "text": "diskon = d * total_harga; harga_diskon = total_harga - diskon",
+      "x": 406,
+      "y": 933,
+      "w": 170,
+      "h": 105
+    },
+    {
+      "id": 8,
+      "type": "process",
+      "text": "ppn = harga_diskon * pajak",
+      "x": 432,
+      "y": 1081,
+      "w": 180,
+      "h": 66
+    },
+    {
+      "id": 11,
+      "type": "end",
+      "text": "End",
+      "x": 447,
+      "y": 1363,
+      "w": 150,
+      "h": 58
+    },
+    {
+      "id": 12,
+      "type": "process",
+      "text": "total_belanja = harga_diskon + ppn; kembalian = uang - total_belanja",
+      "x": 396,
+      "y": 1201,
+      "w": 180,
+      "h": 100
+    }
+  ],
+  "edges": [
+    {
+      "from": 1,
+      "to": 2,
+      "branch": null
+    },
+    {
+      "from": 2,
+      "to": 4,
+      "branch": null
+    },
+    {
+      "from": 4,
+      "to": 5,
+      "branch": null
+    },
+    {
+      "from": 5,
+      "to": 3,
+      "branch": null
+    },
+    {
+      "from": 3,
+      "to": 6,
+      "branch": null
+    },
+    {
+      "from": 6,
+      "to": 7,
+      "branch": null
+    },
+    {
+      "from": 7,
+      "to": 8,
+      "branch": null
+    },
+    {
+      "from": 8,
+      "to": 12,
+      "branch": null
+    },
+    {
+      "from": 12,
+      "to": 11,
+      "branch": null
+    }
+  ],
+  "nextId": 13
+}
